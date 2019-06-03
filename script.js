@@ -13,3 +13,17 @@ function displayUser() {
     activeUser = changeUser(activeUser);
     document.getElementById("message").innerHTML =activeUser;
 }
+let score = 0;
+function changeScore(currentScore) {
+    if(currentScore = 0) {
+        return 
+    }
+}
+let add = function  () {
+    return score ++
+   };   
+   
+let decrease = function  () {
+    return score --
+   };
+

@@ -1,6 +1,7 @@
 <html>  
     <head>
         <title>Hej kamila</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
     </head>
         <body>
         <div>Timer</div>
@@ -8,7 +9,17 @@
         <div>
             Active user is
             <span id="message"></span>
-            <button id="change-user" onclick="displayUser()">Change user</button>
+           <div id=outer_button></div> <button id="change-user" onclick="displayUser()">Change user</button>
+        </div>
+        <div>
+            Current score is 
+            <span id="score"></span>
+        </div>
+        
+        <div>
+
+            <button onclick="add()">+1</button>
+            <button onclick="decrease()">-1</button>
         </div>
         <div>Comments</div>
         <script src="script.js"></script>
