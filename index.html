@@ -13,19 +13,32 @@
             Hello <span id="userName"></span>
         </div>
         <div>Timer</div>
+       <div class = "players" onclick="lastClickedPlayer('Jim')">
+            Jim
+       </div>
+       <div class = "players" onclick="lastClickedPlayer('Tim')">
+            Tim
+       </div>
+       <div class ="players" onclick="lastClickedPlayer('John')">
+            John
+       </div>
+       <div>
+           Last clicked player is
+           <span id="clickedPlayer"></span>
+       </div>
         <div>Board</div>
         <div>
             Active user is
             <span id="message"></span>
            <div id=outer_button></div> <button id="change-user" onclick="displayUser()">Change user</button>
         </div>
+
         <div>
             Current score is 
             <span id="score"></span>
         </div>
         
         <div>
-
             <button onclick="add()">+1</button>
             <button onclick="decrease()">-1</button>
         </div>

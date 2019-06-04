@@ -36,6 +36,17 @@ function showUser () {
 }
 }
 
+// Function that checks which player was clicked
+function lastClickedPlayer (playerName) {
+    console.log("klikłaś mnie", playerName);
+    displayPlayer(playerName);
+}
+
+// Function that displays which player was clicked
+function displayPlayer (player) {
+    document.getElementById("clickedPlayer").innerHTML = player;
+}
+
 // function that displays value
 function displayValue (value) {
     document.getElementById("userName").innerHTML = value;
