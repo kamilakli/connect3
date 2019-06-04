@@ -20,10 +20,12 @@ function changeScore(currentScore) {
     }
 }
 let add = function  () {
-    return score ++
+    score ++
+    document.getElementById("score").innerHTML = score;
    };   
    
 let decrease = function  () {
-    return score --
+    score --
+    document.getElementById("score").innerHTML = score;
    };
 
