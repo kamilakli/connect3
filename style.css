@@ -47,7 +47,10 @@ button:active {
     height: 25%;
     width: 25%;
     margin: 37.5px;
+    background-color: black;
 }
+.specialButton:hover {background-color: rgb(29, 28, 28);}
+
 
 div {
     margin: 2px;
