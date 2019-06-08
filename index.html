@@ -5,46 +5,63 @@
         <script src="script.js"></script>
         <script src="zadanie3.js"></script>
     </head>
-        <body>
+        <body>              
         <div>
             <input type="text" name="Hello" id = "helloInput"><br> 
             <button onclick="showUser()">Hello</button>
-
         </div>
+        <div>
+                Active user is
+                <span id="message"></span>
+               <div id=outer_button></div> 
+               <button onclick="displayUser()">Change user</button>
+            </div>
         <div>
             Hello <span id="userName"></span>
         </div>
+
         <div>Timer</div>
-       <div class = "players" onclick="lastClickedPlayer('Jim')">
+        <div>Board</div><br/>
+        <div class = "players" onclick="lastClickedPlayer('Jim')">
             Jim
-       </div>
-       <div class = "players" onclick="lastClickedPlayer('Tim')">
+        </div>
+
+        <div class = "players" onclick="lastClickedPlayer('Tim')">
             Tim
-       </div>
-       <div class ="players" onclick="lastClickedPlayer('John')">
+        </div>
+
+        <div class ="players" onclick="lastClickedPlayer('John')">
             John
-       </div>
+        </div>
+
        <div>
            Last clicked player is
            <span id="clickedPlayer"></span>
-       </div>
-        <div>Board</div>
-        <div>
-            Active user is
-            <span id="message"></span>
-           <div id=outer_button></div> <button id="change-user" onclick="displayUser()">Change user</button>
-        </div>
+       </div><br/>
 
-        <div>
-            Current score is 
-            <span id="score"></span>
-        </div>
         
-        <div>
+        
+        <div class = "click_counter">
+        <span>JIM:</span>
+        <span id="playerJim">0</span>
+    </div><br/>
+    <div class = "click_counter">
+         <span>TIM:</span>
+         <span id="playerTim">0</span>
+    </div><br/>
+    <div class = "click_counter">
+         <span>JOHN:</span>
+        <span id="playerJohn">0</span>
+    </div><br/><br/>
+    <div>
+            Current score is 
+            <span id="score">0</span>
+    </div>
+    <div>
             <button onclick="add()">+1</button>
             <button onclick="decrease()">-1</button>
-        </div>
+    </div><br/>
+
         <div>Comments</div>
-       
         </body>
 </html>

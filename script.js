@@ -1,7 +1,4 @@
-console.log("Ja tu jestem JS");
-
 let activeUser = "red";
-document.getElementById("message").innerHTML = activeUser;
 function changeUser(currentUser) {
     if(currentUser === "red"){
         return "yellow";
@@ -11,15 +8,8 @@ function changeUser(currentUser) {
 }
 function displayUser() {
     activeUser = changeUser(activeUser);
-    document.getElementById("message").innerHTML =activeUser;
+    document.getElementById("message").innerHTML = activeUser;
 }
-let score = 0;
-function changeScore(currentScore) {
-    if(currentScore = 0) {
-        return 
-    }
-}
-
 
 // function that reads value from input
 function getUser () {
@@ -31,36 +21,27 @@ function showUser () {
     let userName= getUser()
     if(userName !== "") {
     displayValue(userName);
-} else {
+}   else {
     displayValue("Anonymous");
+    }
 }
-}
-
-// Function that checks which player was clicked
-function lastClickedPlayer (playerName) {
-    console.log("klikłaś mnie", playerName);
-    displayPlayer(playerName);
-}
-
-// Function that displays which player was clicked
-function displayPlayer (player) {
-    document.getElementById("clickedPlayer").innerHTML = player;
-}
-
-// function that displays value
+// function that displays value of input
 function displayValue (value) {
     document.getElementById("userName").innerHTML = value;
-}
+}  
+
+let score = 0;
+
 // function that adds value to score on click
-let add = function  () {
-    score ++
+let add = function() {
+    score ++;
     document.getElementById("score").innerHTML = score;
-   };   
+   }   
 
 // function that decreases value of score on click  
-let decrease = function  () {
-    score --
+let decrease = function() {
+    score --;
     document.getElementById("score").innerHTML = score;
-   };
+   }
 
 

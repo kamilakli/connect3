@@ -1,3 +1,7 @@
 div.players {
  display: inline;   
 }
+div.click_counter {
+    display: inline;
+    border: 1em
+}
