@@ -1,6 +1,5 @@
 let circleColor = "#bf3eff";
 function changeColor(currentColor) {
-    console.log("what");
     if(currentColor === "#bf3eff"){
         return "#fff68f";
     } else if (currentColor === "#fff68f")

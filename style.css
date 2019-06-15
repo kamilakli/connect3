@@ -7,17 +7,21 @@ div.annoucePlayer{
     margin:5px 4px 4px 5px;
 }
 div.square {
+    display: inline-block;
     border: 1px solid black;
     padding: 10px;
     height: 100px;
     width: 100px; 
     margin: 1px, 1px, 5px, 1px;
+    position: relative;
 }
 div.circle {
+    display: inline-block;
     border: 1px solid black;
     border-radius: 120px;
     height: 100%;
     width: 100%;
+    position: relative;
     
 }
 button {
@@ -33,7 +37,7 @@ button {
     border: none;
     border-radius: 5px;
     box-shadow: 0 1px #999;
-    margin: 5px;
+    margin: 3px;
 }
 button:hover {background-color: #3e8e41}
 
@@ -42,24 +46,31 @@ button:active {
     box-shadow: 0 2px #666;
     transform: translateY(4px);
 }
-.specialButton{
+button.specialButton{
+    display: inline-flexbox;
     border: 1px solid black;
-    border-radius: 120px;
-    height: 25%;
-    width: 25%;
+    border-radius: 10px;
     background-color: black;
-    display: inline;
+    margin: 10px;
+    flex: right;
+    position: relative;
 }
-.specialButton:hover {background-color: rgb(29, 28, 28);}
+
+button.specialButton:hover {background-color: rgb(29, 28, 28);}
 
 
 div {
     margin: 2px;
     font-size: 18px;
 }
-input.writeColor {
-    margin: 10px;
-    display: inline;
+
+input {
+    float: left;
+}
+div.comments {
+    display: block;
+    margin: 4px;
+    padding: 3px;
     position: relative;
-    padding:2px;
+    float: right;
 }

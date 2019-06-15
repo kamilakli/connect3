@@ -6,17 +6,18 @@
         <script src="zadanie3.js"></script>
         <script src="zadanie4.js"></script>
     </head>
+
         <body>              
         <div>
-            <input type="text" name="Hello" id = "helloInput"><br> 
-            <button onclick="showUser()">Hello</button>
-        </div>
+            <input type="text" name="Hello" id = "helloInput"> 
+         <button onclick="showUser()">Hello</button></div>
+        
         <div>
                 Active user is
                 <span id="message"></span>
                <div id=outer_button></div> 
                <button onclick="displayUser()">Change user</button>
-            </div>
+        </div>
         <div>
             Hello <span id="userName"></span>
         </div>
@@ -61,18 +62,14 @@
     <div>
             <button onclick="add()">+1</button>
             <button onclick="decrease()">-1</button>
-    </div><br/>
-    <div class = "square">
-        <div class="circle" id="colorChanger">
-            
-        </div>
-    <div><button class="specialButton" onclick="showColor()"></button></div>
-    <div>
-        <input class = "writeColor" type="text" name="Backround Color" id = "helloColor"><br> 
     </div>
-
-    </div></br></br>
-        <div>Comments</div>
+    <div class = "square">
+        <div class="circle" id="colorChanger"></div>
+    </div>
+    <span class="specialButton">
+        <button onclick="showColor()" class="specialButton">Change color</button>
+    </span>
+        <div class = "comments">Comments</div>
         </body>
      
 </html>
