@@ -1,0 +1,32 @@
+div {
+    margin: 10px;
+    padding:2px;
+    font-size:14px;
+    position: relative;
+    display: block;
+}
+div.calculate {
+    border: 1px solid black;
+    display: inline-block
+}
+button {
+    display: inline;
+    padding: 5px 10px;
+    font-size: 15px;
+    cursor:pointer;
+    text-align: center;
+    text-decoration: none;
+    outline:none;
+    color:rgb(255, 255, 255);
+    background-color: rgb(81, 118, 199);
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 1px rgb(190, 190, 190);
+}
+button:hover {background-color: #3e578e}
+
+button:active {
+    background-color: #4cb0bd;
+    box-shadow: 0 2px #666;
+    transform: translateY(4px);
+}
