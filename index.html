@@ -5,25 +5,27 @@
         <script src="script.js"></script>
         <script src="zadanie3.js"></script>
         <script src="zadanie4.js"></script>
+        <script src="comments.js"></script>
     </head>
 
-        <body>              
-        <div>
+        <body>
+    <div class = "connect3">             
+        <div class = "input">
             <input type="text" name="Hello" id = "helloInput"> 
-         <button onclick="showUser()">Hello</button></div>
+         <button onclick="showUser()">Hello</button>
+         Hello <span id="userName"></span>
+        </div>
         
-        <div>
+        <div class="active user">
                 Active user is
                 <span id="message"></span>
                <div id=outer_button></div> 
                <button onclick="displayUser()">Change user</button>
         </div>
-        <div>
-            Hello <span id="userName"></span>
-        </div>
+        
 
-        <div>Timer</div>
-        <div>Board</div><br/>
+        <div class="timer">Timer</div>
+        <div class="board">Board</div>
         <div class = "players" onclick="lastClickedPlayer('Jim')">
             Jim
         </div>
@@ -39,37 +41,43 @@
        <div class = "annoucePlayer">
            Last clicked player is
            <span id="clickedPlayer"></span>
-       </div><br/>
-
-        
-        
+       </div>
         <div class = "click_counter">
         <span>JIM:</span>
         <span id="playerJim">0</span>
-    </div><br/>
+    </div>
     <div class = "click_counter">
          <span>TIM:</span>
          <span id="playerTim">0</span>
-    </div><br/>
+    </div>
     <div class = "click_counter">
          <span>JOHN:</span>
         <span id="playerJohn">0</span>
-    </div><br/><br/>
-    <div>
-            Current score is 
-            <span id="score">0</span>
     </div>
-    <div>
-            <button onclick="add()">+1</button>
-            <button onclick="decrease()">-1</button>
+    <div class ="current score">
+    Current score is <span id="score">0</span>
     </div>
+    <div class="addScore">
+        <button onclick="add()">+1</button>
+        <button onclick="decrease()">-1</button>
+    </div>
+    <div class=picture>
     <div class = "square">
         <div class="circle" id="colorChanger"></div>
     </div>
     <span class="specialButton">
         <button onclick="showColor()" class="specialButton">Change color</button>
     </span>
+    </div>
         <div class = "comments">Comments</div>
+        <div class ="text">
+            <textarea class ="textArea" rows="4" cols="50" >Write the comment</textarea>
+            <button onclick ="()" class="specialButton">Add comment</button>
+        </div>
+
+            </div>
+
+        </div>
         </body>
      
 </html>

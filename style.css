@@ -1,3 +1,14 @@
+div {
+    margin: 2px;
+    font-size: 18px;
+}
+
+div.connect3 {
+    display: block;
+    height: 90%;
+    width: 60%;
+    border: 2px solid black;
+}
 div.players {
     display: inline;   
     border: 1px solid black;
@@ -33,25 +44,21 @@ button {
     text-decoration: none;
     outline:none;
     color:#fff;
-    background-color: #4CAF50;
+    background-color: rgb(76, 111, 175);
     border: none;
     border-radius: 5px;
     box-shadow: 0 1px #999;
     margin: 3px;
 }
-button:hover {background-color: #3e8e41}
+button:hover {background-color: #4025db}
 
 button:active {
-    background-color: #3e8e41;
+    background-color: #7256f0;
     box-shadow: 0 2px #666;
     transform: translateY(4px);
 }
 button.specialButton{
     display: inline-flexbox;
-    border: 1px solid black;
-    border-radius: 10px;
-    background-color: black;
-    margin: 10px;
     flex: right;
     position: relative;
 }
@@ -59,18 +66,9 @@ button.specialButton{
 button.specialButton:hover {background-color: rgb(29, 28, 28);}
 
 
-div {
-    margin: 2px;
-    font-size: 18px;
-}
-
-input {
-    float: left;
-}
 div.comments {
     display: block;
     margin: 4px;
     padding: 3px;
     position: relative;
-    float: right;
 }
