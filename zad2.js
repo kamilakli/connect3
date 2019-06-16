@@ -2,7 +2,7 @@ const input1 = () => document.getElementById("inputOne").value;
 const input2 = () => document.getElementById("inputTwo").value;
 const input3 = () => document.getElementById("inputThree").value;
 
-function showresult () {
+function showResult () {
     let firstInput =Number(input1());
     let secondInput=Number(input2());
     let thirdInput=Number(input3());
