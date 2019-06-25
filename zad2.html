@@ -3,32 +3,33 @@
             
         <title>zadanie3</title>
             <link rel="stylesheet" type="text/css" href="zad2.css">
-            <script src="zad2.js"></script>
+           
     </head>
     <body>
         <div class="calculate">
             <div class ="value">
             Value 1
-            <input onchange = "showResult()" type="number" name="input1" id = "inputOne"> 
+            <input type="number" name="input1" id = "inputOne"> 
             </div>
             <div class ="value">
-            Value 2
-            <input onchange = "showResult()" type="number" name= "input2" id ="inputTwo">
+           <!--- Value 2
+            <input type="number" name= "input2" id ="inputTwo">
             </div>
             <div class ="value">
             Value 3
-            <input onchange = "showResult()" type="number" name= "input3" id ="inputThree">
+            <input type="number" name= "input3" id ="inputThree">
+            </div> -->
+           <div class="button">
+            <button onclick="addNumberToList()">Calculate</button>
             </div>
-           <!--- <div class="button">
-            <button onclick="showresult()">Calculate</button>
-            </div>-->
             <div class="result">
             Result: 
             <span id = "displayresult">0</span>
             </div>
         </div>
+        <ul id="mojaLista"></ul>
 
-
+        <script src="zad2.js"></script>
     </body>
 
 </html>

@@ -8,7 +8,7 @@ displayInput (firstInput, secondInput);
 }
 
 const displayInput = (in1, in2) =>{
-document.getElementById("displayBoth").innerHTML = in1+" "+in2;
+    document.getElementById("displayBoth").innerHTML = in1+" "+in2;
 }
 
 

@@ -1,17 +1,18 @@
-let circleColor = "#bf3eff";
-function changeColor(currentColor) {
-    if(currentColor === "#bf3eff"){
-        return "#fff68f";
-    } else if (currentColor === "#fff68f")
-    {
-        return "#a8251d";
-    } else {
-        return "#bf3eff";
-    }
+let circleColor = ["#bf3eff", "#fff68f", "#a8251d" ]
+function changeColor(colorNumber) {
+  return circleColor[colorNumber];
 }
+let colorElement = 0;
 
 // function that displays value of input
 function showColor () {
-    circleColor = changeColor(circleColor);
-    document.getElementById("colorChanger").style.backgroundColor = circleColor;} 
+    let currentColor = changeColor(colorElement);
+    document.getElementById("colorChanger").style.backgroundColor = currentColor;
+    if (colorElement >= (circleColor.length-1)) {
+        colorElement = 0
+    }
+    else {
+    colorElement ++
+    }
+} ;
 

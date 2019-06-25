@@ -13,3 +13,10 @@ const displayInput = (in1, in2, in3) =>{
 let sum = in1 + in2 + in3;
 return document.getElementById("displayresult").innerHTML = sum;
 }
+
+function addNumberToList (){
+let newItem = document.createElement("li");                
+let textValue = document.createTextNode(input1());
+newItem.appendChild(textValue);                             
+document.getElementById("mojaLista").appendChild(newItem);
+};
