@@ -19,7 +19,7 @@ function getUser () {
 // function that reads and displays the input
 function showUser () {
     let userName= getUser()
-    if(userName !== "") {
+    if(userName) {
     displayValue(userName);
 }   else {
     displayValue("Anonymous");

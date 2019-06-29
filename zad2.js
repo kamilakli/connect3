@@ -1,22 +1,25 @@
 const input1 = () => document.getElementById("inputOne").value; 
-const input2 = () => document.getElementById("inputTwo").value;
-const input3 = () => document.getElementById("inputThree").value;
+function addNumberToList () {
+    let newItem = document.createElement("li");                
+    let textValue = document.createTextNode(input1());
+    newItem.appendChild(textValue);                             
+    document.getElementById("mojaLista").appendChild(newItem);
+    showResult ();
+    document.getElementById("inputOne").value = "";
+    };
+let result = 0;
 
 function showResult () {
     let firstInput =Number(input1());
-    let secondInput=Number(input2());
-    let thirdInput=Number(input3());
-displayInput (firstInput, secondInput, thirdInput);
+    displayInput (firstInput);
+    return result = result + firstInput;
 }
 
-const displayInput = (in1, in2, in3) =>{
-let sum = in1 + in2 + in3;
-return document.getElementById("displayresult").innerHTML = sum;
-}
+const displayInput = (in1) =>{
+    return document.getElementById("displayresult").innerHTML = result + in1;
+    }
 
-function addNumberToList (){
-let newItem = document.createElement("li");                
-let textValue = document.createTextNode(input1());
-newItem.appendChild(textValue);                             
-document.getElementById("mojaLista").appendChild(newItem);
-};
+
+
+
+
