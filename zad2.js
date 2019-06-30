@@ -8,16 +8,15 @@ function addNumberToList () {
     document.getElementById("inputOne").value = "";
     };
 let result = 0;
-
+const displayInput = (in1) =>{
+    return document.getElementById("displayresult").innerHTML = result + in1;
+    }
 function showResult () {
     let firstInput =Number(input1());
     displayInput (firstInput);
     return result = result + firstInput;
 }
 
-const displayInput = (in1) =>{
-    return document.getElementById("displayresult").innerHTML = result + in1;
-    }
 
 
 

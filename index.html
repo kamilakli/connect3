@@ -3,81 +3,59 @@
         <title>Hej kamila</title>
         <link rel="stylesheet" type="text/css" href="style.css">
         <script src="script.js"></script>
-        <script src="zadanie3.js"></script>
-        <script src="zadanie4.js"></script>
         <script src="comments.js"></script>
     </head>
 
-        <body>
-    <div class = "connect3">             
-        <div class = "input">
-            <input type="text" name="Hello" id = "helloInput"> 
-         <button onclick="showUser()">Hello</button>
-         Hello <span id="userName"></span>
-        </div>
+    <body>
+        <div class = "header"><h1>Connect 3</h1>
+            <div class = "user"><input type="text" name="Hello" id = "helloInput">
+            <button onclick="showUser()">Hello</button> 
+            Hello <span id="userName"></span> 
         
-        <div class="active user">
+                
+            </div>
+        </div>
+     
+    <div class = "leftColumn">
+        <div class = "topbox">
+        <div class = "box">box1</div>
+        <div class = "box">box2</div>
+        <div class = "box">box3</div>
+        </div>
+
+        <div class = "downbox">
+        <div class = "bottombox">box4</div>
+        <div class = "bottombox">box5</div>
+        </div>
+    </div>
+            
+    <div class = "rightColumn">
+            <button onclick="playGame()">Start</button>
+    <div class="activeuser">
                 Active user is
                 <span id="message"></span>
                <div id=outer_button></div> 
                <button onclick="displayUser()">Change user</button>
-        </div>
-        
-
+    </div>
         <div class="timer">Timer</div>
-        <div class="board">Board</div>
-        <div class = "players" onclick="lastClickedPlayer('Jim')">
-            Jim
+        <div class ="currentscore">
+                Current score is <span id="score">0</span>
         </div>
-
-        <div class = "players" onclick="lastClickedPlayer('Tim')">
-            Tim
-        </div>
-
-        <div class ="players" onclick="lastClickedPlayer('John')">
-            John
-        </div>
-
-       <div class = "annoucePlayer">
-           Last clicked player is
-           <span id="clickedPlayer"></span>
-       </div>
-        <div class = "click_counter">
-        <span>JIM:</span>
-        <span id="playerJim">0</span>
+                <div class="addScore">
+                    <button onclick="add()">+1</button>
+                    <button onclick="decrease()">-1</button>
+                </div>
     </div>
-    <div class = "click_counter">
-         <span>TIM:</span>
-         <span id="playerTim">0</span>
-    </div>
-    <div class = "click_counter">
-         <span>JOHN:</span>
-        <span id="playerJohn">0</span>
-    </div>
-    <div class ="current score">
-    Current score is <span id="score">0</span>
-    </div>
-    <div class="addScore">
-        <button onclick="add()">+1</button>
-        <button onclick="decrease()">-1</button>
-    </div>
-    <div class=picture>
-    <div class = "square">
-        <div class="circle" id="colorChanger"></div>
-    </div>
-    <span class="specialButton">
-        <button onclick="showColor()" class="specialButton">Change color</button>
-    </span>
-    </div>
-        <div class = "comments">Comments</div>
+    
+    <div class = "comments"><h1>Comments</h1>
         <div class ="text">
             <textarea class ="textArea" rows="4" cols="50" placeholder="elo pisz"></textarea>
             <button onclick ="()" class="specialButton">Add comment</button>
         </div>
 
-            </div>
+    </div>
 
-        </div>
-        </body>
+        
+    </body>
      
 </html>

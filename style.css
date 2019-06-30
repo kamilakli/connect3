@@ -1,42 +1,94 @@
-div {
-    margin: 2px;
-    font-size: 18px;
+* {
+    box-sizing: border-box;
+  }
+  
+body {
+    font-family: Arial;
+    padding: 10px;
+    background: #f1f1f1;
+
+}
+.header {
+    padding: 30px;
+    text-align: center;
+    background: white;
+    margin: 15px;
+  }
+.header h1 {
+    font-size: 50px;
+  }
+.user {
+    float: left;
+    width: 50%;
+    position: relative;
+    display: block;
+    height: 15%;
+}
+.leftColumn {
+    float: left;
+    width: 75%;
+    border: 0.5px solid black;
+    background-color: white;
+}
+.topbox {
+    display: inline;
+}
+.box {
+    float: left;
+    width: 33.33%;
+    padding: 2px;
+    height: 25%;
+    background-color: #999;
+    border: 0.5px solid black;
+}
+.downbox {
+    display: inline;
+}
+.bottombox {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    height: 50%;
+    background-color: #666;
+    border: 0.5px solid black;
+}
+.rightColumn {
+    float: left;
+    width: 25%;
+    background-color: white;
+    padding: 10px;
+    margin-top: 10px;
+    border: 0.5px solid black;
+}
+.activeuser {
+    display: block;
+}
+.timer{
+    display: block;
+}
+.currentscore {
+    display: block;
+}
+.comments {
+    float: left;
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+    margin-top: 30px;
+    border: 0.5px solid black;
+}
+.comments h1{
+    font-size: 20px;
+}
+.text {
+    float: left;
+    width: 25%;
+    background: #ddd;
+    margin-top: 30px;
 }
 
-div.connect3 {
-    display: block;
-    height: 90%;
-    width: 60%;
-    border: 2px solid black;
-}
-div.players {
-    display: inline;   
-    border: 1px solid black;
-    padding: 4px;
-}
-div.annoucePlayer{
-    margin:5px 4px 4px 5px;
-}
-div.square {
-    display: inline-block;
-    border: 1px solid black;
-    padding: 10px;
-    height: 100px;
-    width: 100px; 
-    margin: 1px, 1px, 5px, 1px;
-    position: relative;
-}
-div.circle {
-    display: inline-block;
-    border: 1px solid black;
-    border-radius: 120px;
-    height: 100%;
-    width: 100%;
-    position: relative;
-    
-}
 button {
-    display: inline;
+    position: relative;
     padding: 5px 10px;
     font-size: 15px;
     cursor:pointer;
@@ -48,7 +100,7 @@ button {
     border: none;
     border-radius: 5px;
     box-shadow: 0 1px #999;
-    margin: 3px;
+    margin: 1px;
 }
 button:hover {background-color: #4025db}
 
@@ -57,18 +109,21 @@ button:active {
     box-shadow: 0 2px #666;
     transform: translateY(4px);
 }
-button.specialButton{
-    display: inline-flexbox;
-    flex: right;
-    position: relative;
+
+@media screen and (max-width: 800px) {
+    .leftcolumn, .rightcolumn {   
+      width: 100%;
+      padding: 0;
+    }
+  }
+
+
+div.players {
+    display: inline;   
+    border: 1px solid black;
+    padding: 4px;
+}
+div.annoucePlayer{
+    margin:5px 4px 4px 5px;
 }
 
-button.specialButton:hover {background-color: rgb(29, 28, 28);}
-
-
-div.comments {
-    display: block;
-    margin: 4px;
-    padding: 3px;
-    position: relative;
-}

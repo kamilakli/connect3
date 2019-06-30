@@ -1,0 +1,48 @@
+div.square {
+    display: inline-block;
+    border: 1px solid black;
+    padding: 10px;
+    height: 100px;
+    width: 100px; 
+    margin: 1px, 1px, 5px, 1px;
+    position: relative;
+}
+div.circle {
+    display: inline-block;
+    border: 1px solid black;
+    border-radius: 120px;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    
+}
+button {
+    display: inline;
+    padding: 5px 10px;
+    font-size: 15px;
+    cursor:pointer;
+    text-align: center;
+    text-decoration: none;
+    outline:none;
+    color:#fff;
+    background-color: rgb(76, 111, 175);
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 1px #999;
+    margin: 3px;
+}
+button:hover {background-color: #4025db}
+
+button:active {
+    background-color: #7256f0;
+    box-shadow: 0 2px #666;
+    transform: translateY(4px);
+}
+button.specialButton{
+    display: inline-flexbox;
+    flex: right;
+    position: relative;
+}
+
+button.specialButton:hover {background-color: rgb(29, 28, 28);}
+
