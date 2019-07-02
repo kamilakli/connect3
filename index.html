@@ -3,7 +3,7 @@
         <title>Hej kamila</title>
         <link rel="stylesheet" type="text/css" href="style.css">
         <script src="script.js"></script>
-        <script src="comments.js"></script>
+        
     </head>
 
     <body>
@@ -49,13 +49,17 @@
     
     <div class = "comments"><h1>Comments</h1>
         <div class ="text">
-            <textarea class ="textArea" rows="4" cols="50" placeholder="elo pisz"></textarea>
-            <button onclick ="()" class="specialButton">Add comment</button>
+            <textarea id="writeComment" class ="textArea" rows="4" cols="50" placeholder="elo pisz"></textarea>
+            <button onclick="readInput()" class="specialButton">Add comment</button>
         </div>
+        <div class="commentSection" id="displayComments">
+    </div>
+    
+       
 
     </div>
 
-        
+    <script src="comments.js"></script>
     </body>
      
 </html>
