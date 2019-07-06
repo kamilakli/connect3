@@ -9,6 +9,10 @@ body {
 
 }
 .header {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    align-content: stretch;
     padding: 30px;
     text-align: center;
     background: white;
@@ -18,31 +22,51 @@ body {
     font-size: 50px;
   }
 .user {
-    float: left;
-    width: 50%;
     position: relative;
     display: block;
-    height: 15%;
+    font-size: 25px;
+}
+.columns {
+    display: flex;
+    align-items: flex-start;
+    align-content: stretch;
+    height: 80%;
+    margin: 5px;
 }
 .leftColumn {
+    display: block;
     float: left;
     width: 75%;
+    height: 75%;
     border: 0.5px solid black;
     background-color: white;
+    margin:5px;
 }
 .topbox {
-    display: inline;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    align-content: stretch;
+    margin: 1px;
+    height: 50%;
 }
 .box {
     float: left;
     width: 33.33%;
+    height: 100%;
     padding: 2px;
     height: 25%;
     background-color: #999;
     border: 0.5px solid black;
+    margin: 1px;
 }
 .downbox {
-    display: inline;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    align-content: stretch;
+    margin: 1px;
+    height: 50%;
 }
 .bottombox {
     float: left;
@@ -51,23 +75,56 @@ body {
     height: 50%;
     background-color: #666;
     border: 0.5px solid black;
+    margin: 1px;
 }
 .rightColumn {
+    display: block;
     float: left;
     width: 25%;
+    height: 45%;
     background-color: white;
     padding: 10px;
-    margin-top: 10px;
     border: 0.5px solid black;
+    margin: 10px;
 }
 .activeuser {
-    display: block;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    align-content: baseline;
+    border: 0.5px solid black;
+    margin: 1px;
+    padding: 3px;
 }
 .timer{
-    display: block;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    align-content: baseline;
+    border: 0.5px solid black;
+    margin: 1px;
+    padding: 3px;
 }
 .currentscore {
-    display: block;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    align-content: baseline;
+    border: 0.5px solid black;
+    margin: 1px;
+    padding: 3px;
+}
+.allComments{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    align-content: stretch;
+    padding: 30px;
+    text-align: left;
+    background: white;
+    margin:5px;
+    width: 75%;
+
 }
 .comments {
     float: left;
@@ -85,6 +142,12 @@ body {
     width: 25%;
     background: #ddd;
     margin-top: 30px;
+}
+.commentSection {
+    display: block;
+    padding: 5px;
+    margin: 2px;
+    font-size: 18px;
 }
 
 button {
