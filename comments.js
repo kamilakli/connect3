@@ -30,10 +30,20 @@ comments.forEach ((comment) =>{addComment(comment)
  };
  function readInput () {
  const textInput = () => document.getElementById("writeComment").value;
- console.log(textInput());
+ const commentAuthor = () => document.getElementById("author").value;
+ var author = commentAuthor();
+ /*if (author !== "") {
+    'Anonymous'
+ }
+ else {
+     commentAuthor()
+ };*/
  var newComment = {
-     text: textInput()
+     user: author,
+     text: textInput(),
+     date: "2019-03-03 12:36:00"
  };
+
  comments.push(newComment);
  console.log(comments);
  document.getElementById("displayComments").innerHTML="";
