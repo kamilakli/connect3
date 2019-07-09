@@ -32,12 +32,9 @@ comments.forEach ((comment) =>{addComment(comment)
  const textInput = () => document.getElementById("writeComment").value;
  const commentAuthor = () => document.getElementById("author").value;
  var author = commentAuthor();
- /*if (author !== "") {
-    'Anonymous'
+ if (author === "") {
+    author = 'Anonymous';
  }
- else {
-     commentAuthor()
- };*/
  var newComment = {
      user: author,
      text: textInput(),
