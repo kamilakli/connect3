@@ -10,9 +10,9 @@ div.square {
 div.circle {
     display: inline-block;
     border: 1px solid black;
-    border-radius: 120px;
-    height: 100%;
-    width: 100%;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
     position: relative;
     
 }
