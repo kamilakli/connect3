@@ -13,7 +13,7 @@ body {
     flex-flow: column nowrap;
     align-items: center;
     align-content: stretch;
-    padding: 30px;
+    padding: 15px;
     text-align: center;
     background: white;
     margin: 15px;
@@ -28,6 +28,7 @@ body {
 }
 .columns {
     display: flex;
+    flex-flow: row nowrap;
     align-items: flex-start;
     align-content: stretch;
     height: 80%;
@@ -40,42 +41,8 @@ body {
     height: 75%;
     border: 0.5px solid black;
     background-color: white;
-    margin:5px;
-}
-.topbox {
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-    align-content: stretch;
-    margin: 1px;
-    height: 50%;
-}
-.box {
-    float: left;
-    width: 33.33%;
-    height: 100%;
-    padding: 2px;
-    height: 25%;
-    background-color: #999;
-    border: 0.5px solid black;
-    margin: 1px;
-}
-.downbox {
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-    align-content: stretch;
-    margin: 1px;
-    height: 50%;
-}
-.bottombox {
-    float: left;
-    width: 50%;
-    padding: 10px;
-    height: 50%;
-    background-color: #666;
-    border: 0.5px solid black;
-    margin: 1px;
+    margin:10px;
+    padding:10px;
 }
 .rightColumn {
     display: block;
@@ -124,10 +91,9 @@ body {
     background: white;
     margin:5px;
     width: 75%;
-
 }
+
 .comments {
-    float: left;
     padding: 20px;
     text-align: center;
     background: #ddd;
@@ -136,6 +102,16 @@ body {
 }
 .comments h1{
     font-size: 20px;
+}
+.commentSection{
+    float: left;
+    flex-flow: column nowrap;
+    text-align: center;
+    background: #f1f1f1;
+    margin-top: 10px;
+    border: 0.5px solid black;
+    padding: 5px;
+    font-size: 18px;
 }
 .text {
     float: left;
@@ -152,12 +128,6 @@ input {
     margin: 1px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 12px;
-}
-.commentSection {
-    display: block;
-    padding: 5px;
-    margin: 2px;
-    font-size: 18px;
 }
 
 button.table {
@@ -189,8 +159,6 @@ button:active {
       padding: 0;
     }
   }
-
-
 div.players {
     display: inline;   
     border: 1px solid black;
@@ -198,5 +166,14 @@ div.players {
 }
 div.annoucePlayer{
     margin:5px 4px 4px 5px;
+}
+div.circle {
+    display: inline-block;
+    border: 1px solid black;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    position: relative;
+    
 }
 

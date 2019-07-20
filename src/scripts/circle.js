@@ -1,11 +1,23 @@
 import React from 'react'
+import {ActiveUser} from './activeUser';
 
+let basic = '#39D1B4';
+let extra = '#FFD712';
 
 export class Circle extends React.Component {
-    welcome() {
-        console.log('Jestem kółkiem')
-    }
+    constructor(props) {
+        super(props);
+        this.state = {color: basic };
+        this.changeColor = this.changeColor.bind(this);
+      }
+
+      changeColor() {
+        const currentColor = this.state.color == basic ? extra : basic;
+        this.setState({ color: currentColor });
+      }
+
+    
     render () {
-        return <div className='circle' onClick={this.welcome}>{this.props.x}</div>
+        return <div style={{background: this.state.color}} className='circle' onClick={this.changeColor}>{this.props.x}</div>
     }
 }

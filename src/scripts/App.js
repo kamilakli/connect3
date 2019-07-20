@@ -2,11 +2,17 @@ import React from 'react';
 import {Board} from './board';
 import {Header} from './header';
 import {Table} from './table';
+import {Comments} from './comments';
 
 
-export const App = (props) => {
+
+export const App = () => {
     return (
-        <div><Header />
-        <Board /> <Table /> {props.user.name}</div>
+        <div>
+         <div><Header /> </div>
+            <div className ="columns"> <Board/><Table/>
+            </div>
+            <div><Comments /></div>
+        </div>
     );
 }
