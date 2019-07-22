@@ -1,6 +1,8 @@
 import React from 'react'
 import {ActiveUser} from './activeUser';
 
+//tu chciałam kombinować z kolorem i userem
+
 let basic = '#39D1B4';
 let extra = '#FFD712';
 
