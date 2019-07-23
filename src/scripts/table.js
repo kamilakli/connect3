@@ -6,6 +6,10 @@ import {CurrentScore} from './currentScore';
 
 export class Table extends React.Component {
         constructor(){
+        // pamietaj ze jeśli korzystasz z props to musisz je dodać w constructorze 
+        // constructor(props){
+        // super(props)
+        // ....
         super();
         this.state={counter:0}
         this.startGame=this.startGame.bind(this)
@@ -19,6 +23,7 @@ export class Table extends React.Component {
         <div className = "rightColumn">
             <button onClick={this.startGame} className ="table">Start</button>
             {this.state.counter}
+            {/* table dostanie w props activeUser i przekaze do ActiveUser komponent */}
             <ActiveUser />
             <Timer />
             <CurrentScore />

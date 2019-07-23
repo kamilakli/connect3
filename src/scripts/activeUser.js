@@ -10,7 +10,8 @@ export class ActiveUser extends React.Component {
       }
 
     changeUser() {
-        const currentUser = this.state.user == 'yellow' ? 'red' : 'yellow';
+        // pięknę ternary! 
+        const currentUser = this.state.user === 'yellow' ? 'red' : 'yellow';
         this.setState({ user: currentUser });
       }
     
@@ -19,7 +20,8 @@ export class ActiveUser extends React.Component {
         return (
         <div className = "activeuser">
             <p>Active user is {this.state.user}</p>
-            <button onClick={this.changeUser}>Change user </button>
+            <DisplayUserButton text="Change user" onClick={this.changeUser} />
+            {/* <button onClick={this.changeUser}>Change user </button> */}
         </div>
         );
     }

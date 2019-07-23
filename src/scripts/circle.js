@@ -2,7 +2,9 @@ import React from 'react'
 import {ActiveUser} from './activeUser';
 
 //tu chciałam kombinować z kolorem i userem
-
+// kółko dostanie aktywnego uzytkonika i moze go wykorzystac do koloru
+// kluczowe jest, ze musimy przekazywac zmienne przez kilka poziomów
+// ale trzymamy ją u najnizszgo wspólnego rodzica
 let basic = '#39D1B4';
 let extra = '#FFD712';
 
