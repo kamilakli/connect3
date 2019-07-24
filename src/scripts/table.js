@@ -5,8 +5,8 @@ import {CurrentScore} from './currentScore';
 
 
 export class Table extends React.Component {
-        constructor(){
-        super();
+        constructor(props){
+        super(props);
         this.state={counter:0}
         this.startGame=this.startGame.bind(this)
     }
@@ -19,7 +19,7 @@ export class Table extends React.Component {
         <div className = "rightColumn">
             <button onClick={this.startGame} className ="table">Start</button>
             {this.state.counter}
-            <ActiveUser />
+            <ActiveUser activeUser={activeUser} handleChange={changeUser} />
             <Timer />
             <CurrentScore />
         </div>
