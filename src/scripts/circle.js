@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+
 
 //tu chciałam kombinować z kolorem i userem
 
@@ -8,19 +9,12 @@ import React from 'react'
 export class Circle extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {color: {activeUser} };
-        this.changeColor = this.changeColor.bind(this);
+        this.state = {color: this.props.activeUser }
       }
-
-      changeColor() {
-        const currentColor = {activeUser}
-        this.setState({ color: currentColor });
-      }
-
     
     render () {
         return (
-        <div style={{background: this.state.color}} className='circle' onClick={this.changeColor} onClick={this.props.changeUser}>{this.props.x}
+        <div style={{backgroundColor: this.state.color}} className='circle' onClick={this.props.changeUser}>{this.props.x}
 
         </div>
         );

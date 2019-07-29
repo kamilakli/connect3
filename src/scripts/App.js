@@ -5,27 +5,28 @@ import {Table} from './table';
 import {Comments} from './comments';
 
 
-let activeUser = 'red';
 
+let activeUser = 'yellow';
 export class App extends React.Component {
     constructor(props){
         super(props);
-        this.state = { activeUser: 'red' };
+        this.state = { name: {activeUser} };
         this.changeUser = this.changeUser.bind(this);
       }
 
     changeUser() {
-        const currentUser = this.state.activeUser == 'yellow' ? 'red' : 'yellow';
-        this.setState({ activeUser: currentUser });
+        const currentUser = this.state.name == 'yellow' ? 'red' : 'yellow';
+        this.setState( {name: currentUser });
         console.log('pomocy');
       }
+    
 
     render () {
         return (
         <div>
          <div><Header /> </div>
-            <div className ="columns"> <Board activeUser={activeUser} handleChange={changeUser} />
-            <Table activeUser={activeUser} handleChange={changeUser} />
+            <div className ="columns"> <Board activeUser={this.state.name} onClick={changeUser} />
+            <Table activeUser={this.state.name} onClick={changeUser} />
             </div>
             <div><Comments /></div>
         </div>
