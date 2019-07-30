@@ -5,7 +5,13 @@ export class Board extends React.Component {
     render () {
         return (
         <div className = "leftColumn"> 
-        <Circle activeUser={this.props.activeUser} handleChange={this.props.handleChange}/>  
+        {this.props.circleElements.map((element, index)=>
+            <Circle 
+            activeUser={this.props.activeUser} 
+            handleChange={this.props.handleChange}
+            number={index}
+            /> )
+        } 
         </div>
         );
     }
