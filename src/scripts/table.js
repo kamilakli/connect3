@@ -19,7 +19,7 @@ export class Table extends React.Component {
         <div className = "rightColumn">
             <button onClick={this.startGame} className ="table">Start</button>
             {this.state.counter}
-            <ActiveUser activeUser={this.props.activeUser} handleChange={this.props.changeUser} />
+            <ActiveUser activeUser={this.props.activeUser} handleChange={this.props.handleChange} />
             <Timer />
             <CurrentScore />
         </div>

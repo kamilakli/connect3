@@ -5,7 +5,7 @@ export class Board extends React.Component {
     render () {
         return (
         <div className = "leftColumn"> 
-        <Circle activeUser={this.props.activeUser} handleChange={this.props.changeUser}/>  
+        <Circle activeUser={this.props.activeUser} handleChange={this.props.handleChange}/>  
         </div>
         );
     }

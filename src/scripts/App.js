@@ -6,18 +6,18 @@ import {Comments} from './comments';
 
 
 
-let activeUser = 'yellow';
+
 export class App extends React.Component {
     constructor(props){
         super(props);
-        this.state = { name: {activeUser} };
+        this.state = { name: 'red' };
         this.changeUser = this.changeUser.bind(this);
       }
 
     changeUser() {
-        const currentUser = this.state.name == 'yellow' ? 'red' : 'yellow';
-        this.setState( {name: currentUser });
-        console.log('pomocy');
+        const currentUser = this.state.name == 'red' ? 'yellow' : 'red';
+        this.setState({name: currentUser });
+        console.log(this.state.name);
       }
     
 
@@ -25,8 +25,8 @@ export class App extends React.Component {
         return (
         <div>
          <div><Header /> </div>
-            <div className ="columns"> <Board activeUser={this.state.name} onClick={changeUser} />
-            <Table activeUser={this.state.name} onClick={changeUser} />
+            <div className ="columns"> <Board activeUser={this.state.name} handleChange={this.changeUser} />
+            <Table activeUser={this.state.name} handleChange={this.changeUser} />
             </div>
             <div><Comments /></div>
         </div>
