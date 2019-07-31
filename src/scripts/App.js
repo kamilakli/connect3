@@ -5,13 +5,17 @@ import {Table} from './table';
 import {Comments} from './comments';
 
 
-
+let column = ["","","","","",""];
+let board = [[...column],[...column],[...column],[...column],[...column],[...column], [...column]];
 
 export class App extends React.Component {
     constructor(props){
         super(props);
-        this.state = { name: 'red' ,
-        circleElements : ["","","","","","","","","","","","","",""]};
+        this.state = { 
+          name: 'red' ,
+          circleElements : column,
+          columns: board
+        }; 
         this.changeUser = this.changeUser.bind(this);
       }
 
@@ -19,7 +23,11 @@ export class App extends React.Component {
         const currentUser = this.state.name == 'red' ? 'yellow' : 'red';
         const newList =[...this.state.circleElements];
         newList[circleNumber]=this.state.name;
-        this.setState({name: currentUser, circleElements: newList }, function (){console.log(this.state.circleElements)});
+        this.setState(
+          {name: currentUser, circleElements: newList }, 
+          function (){console.log(this.state.circleElements)
+            }
+          );
       }
 
     
@@ -29,10 +37,20 @@ export class App extends React.Component {
         return (
         <div>
          <div><Header /> </div>
-            <div className ="columns"> <Board activeUser={this.state.name} handleChange={this.changeUser} circleElements={this.state.circleElements}/>
-            <Table activeUser={this.state.name} handleChange={this.changeUser} />
+            <div className ="columns"> 
+              <Board 
+                activeUser={this.state.name} 
+                handleChange={this.changeUser} 
+                circleElements={this.state.circleElements}
+                columns={this.state.columns}
+                  />
+              <Table 
+                activeUser={this.state.name} 
+                handleChange={this.changeUser} 
+                  />
             </div>
-            <div><Comments /></div>
+            <div className="comments">
+              <Comments /></div>
         </div>
     );
     }

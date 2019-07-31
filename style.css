@@ -28,17 +28,19 @@ body {
 }
 .columns {
     display: flex;
-    flex-flow: row nowrap;
     align-items: flex-start;
     align-content: stretch;
-    height: 80%;
-    margin: 5px;
+    height: 140%;
+    margin: 2px;
 }
 .leftColumn {
-    display: block;
+    display: flex;
     float: left;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
     width: 75%;
-    height: 75%;
+    height: 95%;
     border: 0.5px solid black;
     background-color: white;
     margin:10px;
@@ -168,14 +170,17 @@ div.annoucePlayer{
     margin:5px 4px 4px 5px;
 }
 div.circle {
-    display: inline-block;
+    display: flex;
+    flex-grow: 1.5;
+    flex-shrink: 1.5;
+    flex-basis: auto;
     border: 1px solid black;
     border-radius: 50%;
-    height: 100px;
-    width: 100px;
+    height: 80px;
+    width: 80px;
     padding: 2px;
     position: relative;
     margin: 2px;
-    
+    cursor:pointer;
 }
 

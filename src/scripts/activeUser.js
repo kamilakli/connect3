@@ -8,7 +8,6 @@ export class ActiveUser extends React.Component {
         return (
         <div className = "activeuser">
             <p>Active user is {this.props.activeUser}</p>
-            <DisplayUserButton text="Change user" handleChange={this.props.handleChange} />
         </div>
         );
     }
