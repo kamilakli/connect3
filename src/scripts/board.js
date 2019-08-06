@@ -12,6 +12,7 @@ export class Board extends React.Component {
                 activeUser={this.props.activeUser} 
                 handleChange={this.props.handleChange}
                 number={{x:position,y:index}}
+                color={this.props.columns[position][index]}
                 /> )
             } 
             </div>

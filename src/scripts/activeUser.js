@@ -8,6 +8,7 @@ export class ActiveUser extends React.Component {
         return (
         <div className = "activeuser">
             <p>Active user is {this.props.activeUser}</p>
+            <button className ="table" onClick={this.props.resetGame}>Reset</button>
         </div>
         );
     }

@@ -14,9 +14,10 @@ export class App extends React.Component {
         super(props);
         this.state = { 
           name: 'red' ,
-          columns: board
+          columns: [[...column],[...column],[...column]],
         }; 
         this.changeUser = this.changeUser.bind(this);
+        this.resetGame = this.resetGame.bind(this);
       }
 
     changeUser(number) {
@@ -41,6 +42,11 @@ export class App extends React.Component {
         }
       }
 
+      resetGame (){
+        console.log(board);
+        this.setState({columns:[[...column],[...column],[...column]]})
+      }
+
     render () {
         return (
         <div>
@@ -53,7 +59,8 @@ export class App extends React.Component {
                   />
               <Table 
                 activeUser={this.state.name} 
-                handleChange={this.changeUser} 
+                handleChange={this.changeUser}
+                resetGame={this.resetGame}
                   />
             </div>
             <div className="comments">

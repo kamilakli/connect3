@@ -3,29 +3,23 @@ import React from 'react';
 export class Circle extends React.Component {
     constructor(props) {
         super(props);
-        this.state={color:'transparent'};
-        this.user="kamila"
         this.changeColor=this.changeColor.bind(this);
     };
     changeColor() {
-        if (this.state.color !== 'transparent' ) {
+        if (this.props.color !== '' ) {
             return;
         }
-        this.setState({color:this.props.activeUser})
         this.props.handleChange(this.props.number);
         
     }
     
     render () {
+        console.log(this.props.color);
         return (
-        <div style={{background: this.state.color}} 
+        <div style={{background: this.props.color}} 
         className='circle' 
         onClick={this.changeColor}
-        >
-        
-        {this.props.x}
-
-        </div>
+        />
         );
     }
 }
