@@ -5,33 +5,41 @@ import {Table} from './table';
 import {Comments} from './comments';
 
 
-let column = ["","","","","",""];
-let board = [[...column],[...column],[...column],[...column],[...column],[...column], [...column]];
+
+let column = ["","",""];
+let board = [[...column],[...column],[...column]];
 
 export class App extends React.Component {
     constructor(props){
         super(props);
         this.state = { 
           name: 'red' ,
-          circleElements : column,
           columns: board
         }; 
         this.changeUser = this.changeUser.bind(this);
       }
 
-    changeUser(circleNumber) {
+    changeUser(number) {
         const currentUser = this.state.name == 'red' ? 'yellow' : 'red';
-        const newList =[...this.state.circleElements];
-        newList[circleNumber]=this.state.name;
+        const newList =[...this.state.columns];
+        newList[number.x][number.y]=this.state.name;
         this.setState(
-          {name: currentUser, circleElements: newList }, 
-          function (){console.log(this.state.circleElements)
-            }
+          {name: currentUser, columns: newList }, 
+          function (){
+            this.checkWinner();
+           
+          }
           );
       }
-
-    
-    
+      checkWinner() 
+      { for (let i=0; i<3; i++)  
+        {
+        if (this.state.columns[i][0]&&this.state.columns[i][0]==this.state.columns[i][1]&&this.state.columns[i][1]==this.state.columns[i][2])
+           {
+          console.log ("The winner is", this.state.columns[i][0])
+           }
+        }
+      }
 
     render () {
         return (
@@ -41,7 +49,6 @@ export class App extends React.Component {
               <Board 
                 activeUser={this.state.name} 
                 handleChange={this.changeUser} 
-                circleElements={this.state.circleElements}
                 columns={this.state.columns}
                   />
               <Table 

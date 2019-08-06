@@ -30,14 +30,12 @@ body {
     display: flex;
     align-items: flex-start;
     align-content: stretch;
-    height: 140%;
+    height: 90%;
     margin: 2px;
 }
 .leftColumn {
-    display: flex;
+    /* display: flex; */
     float: left;
-    flex-direction: row;
-    flex-wrap: nowrap;
     justify-content: space-evenly;
     width: 75%;
     height: 95%;
@@ -45,6 +43,9 @@ body {
     background-color: white;
     margin:10px;
     padding:10px;
+}
+.row {
+    display: flex;
 }
 .rightColumn {
     display: block;
@@ -180,7 +181,7 @@ div.circle {
     width: 80px;
     padding: 2px;
     position: relative;
-    margin: 2px;
+    margin: 3px;
     cursor:pointer;
 }
 

@@ -6,15 +6,15 @@ export class Board extends React.Component {
         return (
             <div className = "leftColumn">
             {this.props.columns.map((single,position) =>
-            <ul>     
-            {this.props.circleElements.map((element, index)=>
+            <div className ="row">     
+            {single.map((element, index)=>
                 <Circle 
                 activeUser={this.props.activeUser} 
                 handleChange={this.props.handleChange}
-                number={index}
+                number={{x:position,y:index}}
                 /> )
             } 
-            </ul>
+            </div>
             )
         }
             </div>

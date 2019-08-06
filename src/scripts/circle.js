@@ -8,8 +8,12 @@ export class Circle extends React.Component {
         this.changeColor=this.changeColor.bind(this);
     };
     changeColor() {
+        if (this.state.color !== 'transparent' ) {
+            return;
+        }
         this.setState({color:this.props.activeUser})
         this.props.handleChange(this.props.number);
+        
     }
     
     render () {
