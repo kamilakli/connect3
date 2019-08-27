@@ -84,6 +84,11 @@ body {
     margin: 1px;
     padding: 3px;
 }
+.score {
+    display: inline;
+    padding: 2px;
+    margin: 0.5px;
+}
 .allComments{
     display: flex;
     flex-flow: column nowrap;

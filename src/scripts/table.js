@@ -21,7 +21,7 @@ export class Table extends React.Component {
             {this.state.counter}
             <ActiveUser activeUser={this.props.activeUser} handleChange={this.props.handleChange} resetGame={this.props.resetGame}/>
             <Timer />
-            <CurrentScore />
+            <CurrentScore scoreRed={this.props.scoreRed} scoreYellow={this.props.scoreYellow}/>
         </div>
         );
     }
